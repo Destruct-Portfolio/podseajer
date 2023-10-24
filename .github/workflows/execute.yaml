@@ -1,0 +1,19 @@
+name: halou_updated
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install npm
+        run: npm install
+      - name: Run roll
+        timeout-minutes: 9999
+        run: npm run start
+      - name: Save the generated files
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v4

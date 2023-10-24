@@ -1,0 +1,25 @@
+{
+  "name": "podseaker",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node .",
+    "prestart": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@destruct/logger": "^1.2.2",
+    "@types/node": "^20.8.8",
+    "@types/objects-to-csv": "^1.3.2",
+    "objects-to-csv": "^1.3.6",
+    "puppeteer": "^21.3.8",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "typescript": "^5.2.2"
+  }
+}
